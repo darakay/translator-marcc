@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class TranslatorResourceTest {
 
-    private static final String URL = "/v1/marcc/translate-task";
+    private static final String URL = "/v1/translator/translate-task";
 
     @Autowired
     private MockMvc mockMvc;
