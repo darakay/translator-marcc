@@ -1,1 +1,11 @@
 language: java
+
+services:
+  - docker
+
+after_success:
+  - docker build -t darakay/marcc-rest:latest .
+
+deploy:
+  provider: script
+  script: sh deploy_dockerhub.sh

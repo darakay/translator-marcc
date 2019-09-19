@@ -1,7 +1,8 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ARG DEP=target/dependency
-COPY ${DEP}/BOOT-INF/lib /marcc/lib
-COPY ${DEP}/META-INF /marcc/META-INF
-COPY ${DEP}/BOOT-INF/classes /marcc
-ENTRYPOINT ["java", "-cp", "marcc:marcc/lib/*", "com.darakay.marcc.TranslatorMarccApplication"]
+
+WORKDIR /marcc
+COPY /target/marcc-rest-1.0.0-SNAPSHOT.jar .
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "marcc-rest-1.0.0-SNAPSHOT.jar"]
