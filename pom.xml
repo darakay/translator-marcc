@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.darakay.marcc</groupId>
-	<artifactId>translator-marcc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>translator-marcc</name>
+	<artifactId>marcc-rest</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Translator Marcc</name>
 	<description>Translator for html and markdown</description>
 
 	<properties>
